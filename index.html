@@ -6,6 +6,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script></script>
+    <header>
+        <h1>Dados para Doação de Sangue</h1>
+    </header>
+    <main>
+        <!-- Nome do usuario -->
+        <div>
+            <label for="Nome">Nome: </label><br>
+                <input type="text" name="Nome" id="Nome" placeholder="Ex.: Joao Silva da Costa" title="Coloque seu nome completo">
+        </div>
+        <!-- Email do usuario -->
+        <div>
+            <label for="Email">E-mail: </label><br>
+                <input type="email" name="Email" id="Email" placeholder="Ex.: Joao_silva@gmail.com" title="Coloque seu e-mail">
+        </div>
+        <!-- Idade do Usuario -->
+        <div>
+            <label for="Idade">Idade: </label><br>
+                <input type="number" name="Idade" id="Idade" placeholder="Ex.: 24" title="Coloque sua idade em anos" min="0" max="150" >
+        </div>
+        <!-- Peso do Usuario -->
+        <div>
+            <label for="Peso">Peso: </label><br>
+                <input type="number" name="Peso" id="Peso" placeholder="Ex.:80 kg" title="Insira apenas a quantidade em kg" min="0">
+        </div>
+        <!-- Tipo Sanguineo do Usuario -->
+        <div>
+            <label for="TipoSanguineo">Tipo Sanguineo: </label><br>
+            <select id="TipoSanguineo">
+                <option value="" disabled selected required>Selecione uma das opções</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+        </div>
+        <!-- Telefone do usuario -->
+        <div>
+            <label for="TelefoneUsuario">Telefone: </label><br>
+                    <input type="tel" id="TelefoneUsuario" placeholder="xx9xxxxxxxx"
+                     minlength= "8" maxlength="11" title="Tem que ser no seguinte formato: xx9xxxxxxxx" class="InputsN" required>
+        </div>
+        <!-- Cidade do Usuario -->
+        <div>
+            <label for="CidadeUsuario">Qual a sua cidade?</label><br>
+                    <input type="text" id="CidadeUsuario" placeholder="Cidade" title="Coloque na seguinte formatação: Cidade" class="InputsN" required>
+        </div>
+        <!-- Estado do Usuario -->
+         <div>
+            <label for="Estado">Qual seu estado?</label><br>
+                <input type="text" id="Estado" placeholder="Estado" title="Coloque na seguinte formatação: Cidade" class="InputsN" required>
+         </div>
+        <script src="scripts/script.js"></script>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados a Daniel Tonioti</p>
+    </footer>
 </body>
 </html>
