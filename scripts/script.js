@@ -8,7 +8,13 @@ let TelefoneUsuario=parseInt(document.getElementById("TelefoneUsuario").value);/
 let CidadeUsuario=document.getElementById("CidadeUsuario").value;
 let Estado=document.getElementById("Estado").value;
 let Idade=document.getElementById("Idade").value;// Utilizado na linha 12
-let submit=document.getElementById("submit").value;
+let Doadores = [];//Utilizado na linha 39
+
+//Verificar Nome
+  const VerifName = Nome.split(" ");
+    if(VerifName.length === 1){
+        return alert("nome inválido");
+    }
 //Verificar Idade
 const Datas = Idade.split("/");
 const AnoNasci= parseInt(Datas[0]);
@@ -19,7 +25,7 @@ alert("Você tem que ter no minimo 16 anos");
 
 //Verificar Email
 if(!Email.includes("@")||!Email.includes(".")){
-    alert("Email invalido bro");
+    alert("Email invalido");
 }
 
 //Verificar Peso
@@ -28,4 +34,18 @@ if(Peso<=49) return alert("Você deve ter pelo o menos 50 kg");
 //Verificar Telefone
 if(isNaN(TelefoneUsuario)) return alert("Telefone invalido");
 
+//Armazenar dados do doador
+const novoDoador = {
+    nome: Nome,
+    email: Email,
+    idade: Idade,
+    peso: Peso,
+    tipoSanguineo: TipoSanguineo,
+    telefone: TelefoneUsuario,
+    cidade: CidadeUsuario,
+    estado: Estado
+};
+Doadores.push(novoDoador);
+
+document.getElementById("submit").innerHTML = "Cadastro feito com sucesso!";
 });
